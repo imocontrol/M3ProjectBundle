@@ -1,0 +1,9 @@
+services:
+    imocontrol.project:
+      class: %imocontrol.project.admin.class%
+      tags:
+        - { name: sonata.admin, manager_type: orm, group: Projects, label: project_title, persist_filters: true }
+      arguments: [null, %imocontrol.project.admin.entity.class%, %imocontrol.project.admin.controller.class%]
+      calls:
+        - [setSecurityContext, [@security.context]]
+        - [setTranslationDomain, [%imocontrol.project.admin.translation%]]

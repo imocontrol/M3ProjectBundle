@@ -1,0 +1,5 @@
+Application\IMOControl\M3\ProjectBundle\Entity\Project:
+  type: mappedSuperclass
+  table: imocapp___projects
+  fields:
+    
